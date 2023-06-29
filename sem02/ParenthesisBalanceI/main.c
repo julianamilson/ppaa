@@ -12,7 +12,6 @@ int main(void)
 	for (int i = 0; i < n; i++)
 	{
 		expression = prt_create();
-		scanf(" %s", expression);
 		parenthesis_balance(expression);
 		prt_free(expression);
 	}

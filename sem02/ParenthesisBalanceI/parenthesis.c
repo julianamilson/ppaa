@@ -1,6 +1,25 @@
 #include "parenthesis.h"
 
+prt *prt_create(void)
+{
+	prt	*node;
 
+	node = (prt *)malloc(sizeof(prt) * 1);
+	node->lp = 0;
+	node->rp = 0;
+	scanf(" %s", node->s);
+
+	return node;
+}
+
+void prt_free(prt *e)
+{
+	free (e);
+	e = NULL;
+}
+
+void prt_access(prt *e);
+void prt_attribute(prt *e);
 
 static int	search_parenthesis(char *s)
 {
@@ -35,9 +54,9 @@ int open_parenthesis(prt *e)
 	return 0;
 }
 
-int	parenthesis_balance(char *s)
+int	parenthesis_balance(prt *e)
 {
-	if (!open_parenthesis(s))
+	if (!open_parenthesis(e))
 	{
 		printf("correct\n");
 		return 1;
