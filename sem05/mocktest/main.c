@@ -49,3 +49,17 @@ content: E  .
          H: 0  T: 1
 
 */
+
+#include "q1.h"
+
+int main(void)
+{
+    Fila f;
+
+    f.head = 0;
+    f.tail = 0;
+    f.index = 2;
+    scanf(" %s", f.s);
+    queue(&f);
+    return 0;
+}
