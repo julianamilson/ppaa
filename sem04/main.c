@@ -9,9 +9,18 @@ int	main(void)
 		printf("%c = %d\n", s[i], ultima_ocorrencia(s, s[i]));
 
 	char *str = inverte(s);
-	printf("O inverso da string %s eh %s\n", s, str);
+	printf("\nO inverso da string %s eh %s\n", s, str);
 	free(str);
 
-	
+	printf("\nCodificando strings\n");
+	codifica(s);
+	codifica("PUC-Rio");
+
+	char string[80];
+	printf("\nDigite uma string\n");
+	scanf("%80[^\n]", string);
+	printf("Codificando strings\n");
+	codifica(string);
+
 	return 0;
 }
